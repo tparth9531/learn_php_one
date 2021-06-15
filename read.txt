@@ -1,0 +1,50 @@
+Git and Github :
+
+1) Download Git
+2) Check Git properly installed or not
+3) Go to htdocs , select any project , right click, Git GUI HERE & Git Bash Here
+4) Google search : github : GitHub: Where the world builds software · GitHubhttps://github.com
+5) Crate / Register Account 
+6) Click on + button 
+7) Create Repository / New Repository
+8) Repository name
+9) Description (optional)
+10) public select for free / private is paid
+11) Click on create
+
+
+Basic Commands list : 
+1) git init
+2) git add [filename] || -A
+3) git status
+4) git commit -m "Message"
+5) git remote add origin repoName[URL copy & paste]
+6) git push origin master
+7) git clone repoName[URL]
+8) git pull origin master
+
+
+1) git config --global user.email "Email_id"
+2) git config --global user.name "Name"
+
+For Branch :
+1) git branch 
+2) git branch branchName
+3) git checkout branchName - switched to branch 
+4) git branch
+5) ls
+6) git add -A
+7) git commit -m "msg"
+8) git branch
+9) git checkout master - switched to branch master
+10) git merge branchName
+
+
+For Log:
+
+1) git log
+2) git log -p [full details]
+3) git log --oneline
+4) git log -2 [last 2 records]
+5) git log -i --grep="any text" [search by text]
+6) git log -i --author="author Name" [search by author name]
