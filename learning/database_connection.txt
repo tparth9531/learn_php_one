@@ -1,0 +1,15 @@
+Steps for Database Connection : 
+
+Step-1 : 
+
+
+* Requirements for database connection :
+1) Host Name
+2) Username
+3) Password
+4) Database Name
+
+e.g. $dbHost = "localhost";
+	$dbUserName = "root";
+	$dbPassword = "";
+	$dbDatabaseName = "learn_php_one";
