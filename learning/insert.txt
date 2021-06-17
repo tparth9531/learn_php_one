@@ -1,0 +1,5 @@
+step-1 : database connection
+step-2 : insertion process
+
+question -1 : Can this be done?
+              Can be done to perform the code of php html and jquery on same page?

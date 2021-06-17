@@ -1,6 +1,7 @@
 Steps for Database Connection : 
 
-Step-1 : 
+Step-1 : $con = new mysqli($dbHost,dbUserName,dbPassword,dbDatabaseName);
+Step-2 : Check connection successful or not
 
 
 * Requirements for database connection :
@@ -13,3 +14,9 @@ e.g. $dbHost = "localhost";
 	$dbUserName = "root";
 	$dbPassword = "";
 	$dbDatabaseName = "learn_php_one";
+
+
+if ($con->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";

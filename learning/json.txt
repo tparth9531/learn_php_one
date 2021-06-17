@@ -1,0 +1,38 @@
+A common use of JSON is to read data from a web server, and display the data in a web page.
+
+how to exchange JSON data between the client and a PHP server.
+
+PHP has some built-in functions to handle JSON.
+
+===========================================================================================================
+
+Objects in PHP can be converted into JSON by using the PHP function json_encode()
+
+<?php
+$myObj->name = "John";
+$myObj->age = 30;
+$myObj->city = "New York";
+
+$myJSON = json_encode($myObj);
+
+echo $myJSON;
+?>
+
+output : {"name":"John","age":30,"city":"New York"}
+
+===========================================================================================================
+
+***PHP Array
+Arrays in PHP will also be converted into JSON when using the PHP function json_encode()
+
+<?php
+$myArr = array("John", "Mary", "Peter", "Sally");
+
+$myJSON = json_encode($myArr);
+
+echo $myJSON;
+?>
+
+output : ["John","Mary","Peter","Sally"]
+
+===========================================================================================================
