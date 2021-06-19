@@ -83,8 +83,7 @@ $result = $con->query($sql);
             <th>Last Name</th>
             <th>Mobile</th>
             <th>Email</th>
-            <th>Edit</th>
-            <th>Delete</th>            
+                      
           </tr>
         </thead>
         <tbody>
@@ -102,8 +101,7 @@ $result = $con->query($sql);
             <td><?php echo $row['last_name']?></td>
             <td><?php echo $row['mobile']?></td>
             <td><?php echo $row['email']?></td>
-            <td><a href="registration_same_page.php">Edit</a></td>
-            <td><a href="registration_same_page.php">Delete</a></td>
+            
           </tr>
         <?php } ?>
         </tbody>
