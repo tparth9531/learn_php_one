@@ -1,11 +1,3 @@
-<?php 
-
-    echo "hello";
-
-    print_r($_POST);
-
-    ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -40,17 +32,24 @@
     					<label class="form-label" for="last_name">Last name</label>
     				</div>
     			</div>
+
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="mobile" name="mobile" class="form-control" required="" />
+              <label class="form-label" for="mobile">Mobile</label>
+            </div>
+          </div>
     		</div>
 
     		<!-- Email input -->
     		<div class="form-outline mb-4">
-    			<input type="email" id="email" class="form-control" required="" />
+    			<input type="email" id="email" name="email" class="form-control" required="" />
     			<label class="form-label" for="email">Email address</label>
     		</div>
 
     		<!-- Password input -->
     		<div class="form-outline mb-4">
-    			<input type="password" id="password" class="form-control" required="" />
+    			<input type="password" id="password" name="password" class="form-control" required="" />
     			<label class="form-label" for="password">Password</label>
     		</div> 		
 
@@ -75,14 +74,14 @@
     		e.preventDefault();
 
     	$.ajax({
-    		type: 'POST',
-    		url: 'registration.php',
+        url:'insert.php',
+    		type:'POST',    		
     		data: new FormData(this),
-    		dataType: 'json',
-    		contentType: false,
-    		cache: false,
+    		dataType:'json',
+    		contentType:false,
+    		cache:false,
     		processData:false,    		
-            success: function(response){ 
+        success: function(response){ 
             	
             }
         });

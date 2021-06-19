@@ -1,0 +1,30 @@
+//$rows = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+
+  /*foreach ($rows as $data) {   
+
+    echo $data['first_name'];
+  } */
+
+  /*while($rows = $result->fetch_array())
+  {
+
+    echo $rows['last_name'];
+  }*/
+
+
+  /*$rows = $result->fetch_array();
+
+  $row =array($rows);
+
+  foreach ($row as $data)
+  {
+    // code...
+    echo $data['first_name'];
+  }*/
+
+
+  /*$rows = $result->fetch_all();
+  foreach($rows as $row)
+  {
+    echo $row['first_name'];
+  }*/

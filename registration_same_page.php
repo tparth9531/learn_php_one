@@ -1,14 +1,20 @@
 <?php 
 
 include_once 'db.php';
+
 extract($_POST);
 
-if (isset($first_name)) {
+if (isset($first_name))
+{
   
-  $q = "INSERT INTO admin (first_name, last_name, mobile, email, password) values('$first_name','$last_name','$mobile', '$email','$password')";
+  $sql= "INSERT INTO admin (first_name, last_name, mobile, email, password) values('$first_name','$last_name','$mobile', '$email','$password')";
+  
+  $result = $con->query($sql);
 
-  mysqli_query($db, $q);
 }
+
+$sql = "SELECT * FROM admin";
+$result = $con->query($sql);
 
 ?>
 
@@ -67,6 +73,42 @@ if (isset($first_name)) {
     	
     	<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit">
     </form>
+
+    <div class="table-responsive">
+      <table class="table" id="show_data_table">
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <?php   
+
+          $i=1;
+          while($row = $result->fetch_assoc())
+          {
+
+          ?>
+
+          <tr>
+            <td><?php echo $i++;?></td>
+            <td><?php echo $row['first_name'];?></td>
+            <td><?php echo $row['last_name']?></td>
+            <td><?php echo $row['mobile']?></td>
+            <td><?php echo $row['email']?></td>
+            <td><a href="registration_same_page.php">Edit</a></td>
+            <td><a href="registration_same_page.php">Delete</a></td>
+          </tr>
+        <?php } ?>
+        </tbody>
+      </table>
+    </div>
    
 
     
@@ -85,6 +127,9 @@ if (isset($first_name)) {
     <script type="text/javascript">
 
       $(document).ready(function(){
+        
+          $('#show_data_table').DataTable();
+
 
         $('#reg_form').submit(function(e){
           e.preventDefault();
@@ -100,9 +145,10 @@ if (isset($first_name)) {
             }
 
           });
-        });
+        }); 
 
-        
+
+
 
 
       });

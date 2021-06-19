@@ -6,11 +6,11 @@ $dbPassword = "";
 $dbName     = "php_one"; 
  
 // Create database connection 
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); 
+$con = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); 
 
 
  
 // Check connection 
-if ($db->connect_error) { 
-    die("Connection failed: " . $db->connect_error); 
+if ($con->connect_error) { 
+    die("Connection failed: " . $con->connect_error); 
 }
